@@ -2,12 +2,12 @@
  * @Author: your name
  * @Date: 2021-08-17 19:11:28
  * @LastEditors: xkccoding@gmail.com
- * @LastEditTime: 2021-08-17 19:34:40
+ * @LastEditTime: 2021-08-19 00:56:06
  * @FilePath: /react-vblog/src/utils/axios.ts
  */
 
 import axios from 'axios'
-const baseUrl =  'http://localhost:3000'
+const baseUrl =  'http://localhost:8012'
 const version =  '/api/v1'
 const instance = axios.create({
 	baseURL: baseUrl + version,
