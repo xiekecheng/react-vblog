@@ -1,17 +1,21 @@
+/*
+ * @Author: your name
+ * @Date: 2021-08-17 12:26:01
+ * @LastEditors: xkccoding@gmail.com
+ * @LastEditTime: 2021-08-17 20:04:51
+ * @FilePath: /react-vblog/src/index.tsx
+ */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './assets/css/index.css';
 import App from './App';
-import { store } from './app/store';
-import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
-
+import { store } from '@/store'
+import { Provider } from 'react-redux'
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
+  <Provider store={store}>
       <App />
-    </Provider>
-  </React.StrictMode>,
+      </Provider>,
   document.getElementById('root')
 );
 
