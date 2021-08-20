@@ -3,3 +3,18 @@
 		width: 200px;
 	}
 }
+
+.ant-layout{
+	
+	.ant-layout-header{
+		padding: 0;
+		.my-layout-header{
+			padding: 0 50px;
+		}
+	}
+	.my-layout-content{
+		padding: 30px;
+		background-color: white;
+		height: 100%;
+	}
+}

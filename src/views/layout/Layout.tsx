@@ -2,30 +2,32 @@
  * @Author: your name
  * @Date: 2021-08-17 16:36:35
  * @LastEditors: xkccoding@gmail.com
- * @LastEditTime: 2021-08-19 00:59:44
+ * @LastEditTime: 2021-08-19 12:18:11
  * @FilePath: /react-vblog/src/views/layout/Layout.tsx
  */
 import React from 'react';
 import './Layout.scss' ;
 import { Layout } from 'antd';
 import LayoutSider from './components/LayoutSider';
-const { Header, Footer, Sider, Content } = Layout;
+import LayoutContent from './components/LayoutContent';
+import LayoutHeader from './components/LayoutHeader';
+
+const { Header, Sider, Content } = Layout;
 const LayoutPage = () => {
 	return (
 		<>
     <Layout>
-      <Header style={{backgroundColor:'#20A0FF'}}>
-        <h1>V部落博客管理平台</h1>
+      <Header >
+        <LayoutHeader/>
       </Header>
       <Layout>
         <Sider>
           <LayoutSider/>
         </Sider>
         <Content>
-          <h1>Content</h1>
+          <LayoutContent/>
         </Content>
       </Layout>
-      <Footer>Footer</Footer>
     </Layout>
 		</>
 
