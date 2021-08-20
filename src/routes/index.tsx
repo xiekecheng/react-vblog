@@ -2,7 +2,7 @@
  * @Author: your name
  * @Date: 2021-08-17 13:53:44
  * @LastEditors: xkccoding@gmail.com
- * @LastEditTime: 2021-08-19 21:46:16
+ * @LastEditTime: 2021-08-20 10:26:48
  * @FilePath: /react-vblog/src/routes/index.tsx
  */
 import React from 'react'
@@ -28,6 +28,12 @@ const Map = loadable(() => import('@/views/statistics/Map.jsx'))
 
 // 店铺模块
 const ShopManage = loadable(() => import('@/views/shop/ShopManage'))
+const RoleManage = loadable(() => import('@/views/shop/RoleManage'))
+const StaffManage = loadable(() => import('@/views/shop/StaffManage'))
+
+// 员工模块
+const StaffList = loadable(() => import('@/views/staff/StaffList'))
+const StaffAdd = loadable(() => import('@/views/staff/StaffAdd'))
 const routes = [
 	{
 		id: 1000,
@@ -49,7 +55,7 @@ const routes = [
 				title: '发表文章',
 				path: '/articleAdd',
 				permission: ['admin', 'editor'],
-				component: ArticleAdd ,
+				component: ArticleAdd,
 				breadcrumbName: 'articleAdd',
 			},
 		],
@@ -65,7 +71,7 @@ const routes = [
 				id: 1101,
 				title: '用户列表',
 				path: '/userManage',
-				component: UserManage ,
+				component: UserManage,
 				permission: ['admin', 'editor'],
 				breadcrumbName: 'userManage',
 			},
@@ -88,7 +94,7 @@ const routes = [
 				id: 1201,
 				title: '栏目管理',
 				path: '/columnManage',
-				component: ColumnManage ,
+				component: ColumnManage,
 				permission: ['admin', 'editor'],
 				breadcrumbName: 'columnManage',
 			},
@@ -105,7 +111,7 @@ const routes = [
 				id: 1301,
 				title: '数据图表',
 				path: '/chart',
-				component: Chart ,
+				component: Chart,
 				permission: ['admin', 'editor'],
 				breadcrumbName: 'chart',
 			},
@@ -113,7 +119,7 @@ const routes = [
 				id: 1302,
 				title: '地图图表',
 				path: '/map',
-				component: Map ,
+				component: Map,
 				permission: ['admin', 'editor'],
 				breadcrumbName: 'map',
 			},
@@ -130,16 +136,58 @@ const routes = [
 				id: 1401,
 				title: '店铺管理',
 				path: '/shop_manage',
-				component: ShopManage ,
+				component: ShopManage,
+				permission: ['admin', 'editor'],
+				breadcrumbName: 'home',
+			},
+			{
+				id: 1402,
+				title: '角色管理',
+				path: '/role_manage',
+				component: RoleManage,
+				permission: ['admin', 'editor'],
+				breadcrumbName: 'home',
+			},
+			{
+				id: 1403,
+				title: '员工管理',
+				path: '/staff_manage',
+				component: StaffManage,
+				permission: ['admin', 'editor'],
+				breadcrumbName: 'home',
+			},
+		],
+	},
+	{
+		id: 1500,
+		title: '员工管理',
+		permission: ['admin', 'editor'],
+		icon: <BarChartOutlined />,
+		breadcrumbName: 'home',
+		children: [
+			{
+				id: 1501,
+				title: '员工列表',
+				path: '/staff_list',
+				component: StaffList,
+				permission: ['admin', 'editor'],
+				breadcrumbName: 'home',
+			},
+			{
+				id: 1502,
+				title: '添加员工',
+				path: '/staff_add',
+				component: StaffAdd,
 				permission: ['admin', 'editor'],
 				breadcrumbName: 'home',
 			},
 			// {
-			// 	id: 1402,
-			// 	title: '地图图表',
-			// 	path: '/map',
-			// 	component: Map ,
+			// 	id: 1503,
+			// 	title: '员工管理',
+			// 	path: '/staff_manage',
+			// 	component: StaffManage,
 			// 	permission: ['admin', 'editor'],
+			// 	breadcrumbName: 'home',
 			// },
 		],
 	},
