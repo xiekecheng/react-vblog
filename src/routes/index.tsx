@@ -2,7 +2,7 @@
  * @Author: your name
  * @Date: 2021-08-17 13:53:44
  * @LastEditors: xkccoding@gmail.com
- * @LastEditTime: 2021-08-20 10:26:48
+ * @LastEditTime: 2021-08-27 16:02:07
  * @FilePath: /react-vblog/src/routes/index.tsx
  */
 import React from 'react'
@@ -34,6 +34,11 @@ const StaffManage = loadable(() => import('@/views/shop/StaffManage'))
 // 员工模块
 const StaffList = loadable(() => import('@/views/staff/StaffList'))
 const StaffAdd = loadable(() => import('@/views/staff/StaffAdd'))
+
+// 权益管理
+const RightCard = loadable(() => import('@/views/right/RightCard'))
+const RightManage = loadable(() => import('@/views/right/RightManage'))
+const RightAdd = loadable(() => import('@/views/right/RightAdd'))
 const routes = [
 	{
 		id: 1000,
@@ -181,14 +186,40 @@ const routes = [
 				permission: ['admin', 'editor'],
 				breadcrumbName: 'home',
 			},
-			// {
-			// 	id: 1503,
-			// 	title: '员工管理',
-			// 	path: '/staff_manage',
-			// 	component: StaffManage,
-			// 	permission: ['admin', 'editor'],
-			// 	breadcrumbName: 'home',
-			// },
+		],
+	},
+	{
+		id: 1600,
+		title: '权益管理',
+		permission: ['admin', 'editor'],
+		icon: <BarChartOutlined />,
+		breadcrumbName: 'right',
+		children: [
+			{
+				id: 1601,
+				title: '权益卡',
+				path: '/right_card',
+				component: RightCard,
+				permission: ['admin', 'editor'],
+				breadcrumbName: 'home',
+				// children:[
+				// 	{
+				// 		id:1611,
+				// 		title:'权益卡管理',
+				// 		path: '/right_manage',
+				// 		component:RightManage,
+				// 		permission:['admin', 'editor'],
+				// 	}
+				// ]
+			},
+			{
+				id: 1602,
+				title: '新建权益卡',
+				path: '/right_add',
+				component: RightAdd,
+				permission: ['admin', 'editor'],
+				breadcrumbName: 'home',
+			},
 		],
 	},
 ]

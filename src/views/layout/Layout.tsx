@@ -2,36 +2,36 @@
  * @Author: your name
  * @Date: 2021-08-17 16:36:35
  * @LastEditors: xkccoding@gmail.com
- * @LastEditTime: 2021-08-19 12:18:11
+ * @LastEditTime: 2021-08-28 21:42:07
  * @FilePath: /react-vblog/src/views/layout/Layout.tsx
  */
-import React from 'react';
-import './Layout.scss' ;
-import { Layout } from 'antd';
-import LayoutSider from './components/LayoutSider';
-import LayoutContent from './components/LayoutContent';
-import LayoutHeader from './components/LayoutHeader';
+import React from 'react'
+import './Layout.scss'
+import { Layout } from 'antd'
+import LayoutSider from './components/LayoutSider'
+import LayoutContent from './components/LayoutContent'
+import LayoutHeader from './components/LayoutHeader'
 
-const { Header, Sider, Content } = Layout;
+const { Header, Sider, Content } = Layout
 const LayoutPage = () => {
 	return (
 		<>
-    <Layout>
-      <Header >
-        <LayoutHeader/>
-      </Header>
-      <Layout>
-        <Sider>
-          <LayoutSider/>
-        </Sider>
-        <Content>
-          <LayoutContent/>
-        </Content>
-      </Layout>
-    </Layout>
+			<Layout>
+				<Header>
+					<LayoutHeader />
+				</Header>
+				<Layout>
+					<Sider>
+						<LayoutSider />
+					</Sider>
+					{/* style={{minWidth:'800px'}} */}
+					<Content>
+						<LayoutContent />
+					</Content>
+				</Layout>
+			</Layout>
 		</>
+	)
+}
 
-	);
-};
-
-export default LayoutPage;
+export default LayoutPage
