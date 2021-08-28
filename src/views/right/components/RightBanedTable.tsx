@@ -2,59 +2,51 @@
  * @Author: your name
  * @Date: 2021-08-27 16:37:52
  * @LastEditors: xkccoding@gmail.com
- * @LastEditTime: 2021-08-28 22:34:05
- * @FilePath: /react-vblog/src/views/right/components/ReceiveTable.tsx
+ * @LastEditTime: 2021-08-28 22:50:16
+ * @FilePath: /react-vblog/src/views/right/components/RightBanedTable.tsx
  */
 import React from 'react'
 import { Table } from 'antd'
 
 const columns: any = [
 	{
-		title: '领取时间',
+		title: '权益卡名称',
 		width: 100,
 		dataIndex: 'name',
 		key: 'name',
-		// fixed: 'left',
+		fixed: 'left',
 	},
 	{
-		title: '卡号',
+		title: '领取条件',
 		width: 100,
 		dataIndex: 'age',
 		key: 'age',
 		// fixed: 'left',
 	},
 	{
-		title: '权益卡|类型',
+		title: '有效期',
 		dataIndex: 'address',
 		key: '1',
 		width: 150,
 	},
 	{
-		title: '领卡人',
+		title: '权益',
 		dataIndex: 'address',
 		key: '2',
 		width: 150,
 	},
 	{
-		title: '发卡人',
+		title: '领卡用户数',
 		dataIndex: 'address',
 		key: '3',
 		width: 150,
 	},
 
 	{
-		title: '状态',
-		key: 'operation',
-		width: 100,
-		dataIndex: 'address',
-		// render: () => <a>action</a>,
-	},
-	{
 		title: '操作',
-		dataIndex: 'operation',
 		key: 'operation',
 		fixed: 'right',
-		width: 150,
+		width: 60,
 		render: () => <a>编辑</a>,
 	},
 ]
@@ -63,7 +55,7 @@ const data: any[] = []
 for (let i = 0; i < 100; i++) {
 	data.push({
 		key: i,
-		name: `Edrward ${i}`,
+		name: `已禁用权益卡 ${i}`,
 		age: 32,
 		address: `London Park no. ${i}`,
 	})
@@ -71,7 +63,7 @@ for (let i = 0; i < 100; i++) {
 const RightTable = () => {
 	return (
 		<div>
-			<Table columns={columns} dataSource={data} scroll={{ x: 1200, y: 300 }} />
+			<Table columns={columns} dataSource={data} scroll={{ x: 1500, y: 300 }} />
 			,
 		</div>
 	)

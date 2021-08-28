@@ -2,7 +2,7 @@
  * @Author: your name
  * @Date: 2021-08-27 16:37:52
  * @LastEditors: xkccoding@gmail.com
- * @LastEditTime: 2021-08-27 16:43:12
+ * @LastEditTime: 2021-08-28 22:48:02
  * @FilePath: /react-vblog/src/views/right/components/RightTable.tsx
  */
 import React from 'react'
@@ -46,8 +46,8 @@ const columns: any = [
 		title: '操作',
 		key: 'operation',
 		fixed: 'right',
-		width: 100,
-		render: () => <a>action</a>,
+		width: 60,
+		render: () => <a>编辑</a>,
 	},
 ]
 
@@ -55,7 +55,7 @@ const data: any[] = []
 for (let i = 0; i < 100; i++) {
 	data.push({
 		key: i,
-		name: `Edrward ${i}`,
+		name: `使用中权益卡 ${i}`,
 		age: 32,
 		address: `London Park no. ${i}`,
 	})

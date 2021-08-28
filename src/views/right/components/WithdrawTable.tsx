@@ -2,23 +2,23 @@
  * @Author: your name
  * @Date: 2021-08-27 16:37:52
  * @LastEditors: xkccoding@gmail.com
- * @LastEditTime: 2021-08-28 22:34:05
- * @FilePath: /react-vblog/src/views/right/components/ReceiveTable.tsx
+ * @LastEditTime: 2021-08-28 22:32:37
+ * @FilePath: /react-vblog/src/views/right/components/WithdrawTable.tsx
  */
 import React from 'react'
 import { Table } from 'antd'
 
 const columns: any = [
 	{
-		title: '领取时间',
-		width: 100,
+		title: '退卡时间',
+		width: 40,
 		dataIndex: 'name',
 		key: 'name',
 		// fixed: 'left',
 	},
 	{
 		title: '卡号',
-		width: 100,
+		width: 60,
 		dataIndex: 'age',
 		key: 'age',
 		// fixed: 'left',
@@ -27,25 +27,25 @@ const columns: any = [
 		title: '权益卡|类型',
 		dataIndex: 'address',
 		key: '1',
-		width: 150,
+		width: 40,
 	},
 	{
-		title: '领卡人',
+		title: '退卡金额',
 		dataIndex: 'address',
 		key: '2',
-		width: 150,
+		width: 40,
 	},
 	{
-		title: '发卡人',
+		title: '会员',
 		dataIndex: 'address',
 		key: '3',
-		width: 150,
+		width: 40,
 	},
 
 	{
-		title: '状态',
+		title: '操作人',
 		key: 'operation',
-		width: 100,
+		width: 40,
 		dataIndex: 'address',
 		// render: () => <a>action</a>,
 	},
@@ -53,8 +53,8 @@ const columns: any = [
 		title: '操作',
 		dataIndex: 'operation',
 		key: 'operation',
-		fixed: 'right',
-		width: 150,
+		// fixed: 'right',
+		width: 40,
 		render: () => <a>编辑</a>,
 	},
 ]
@@ -65,13 +65,13 @@ for (let i = 0; i < 100; i++) {
 		key: i,
 		name: `Edrward ${i}`,
 		age: 32,
-		address: `London Park no. ${i}`,
+		address: `London no. ${i}`,
 	})
 }
 const RightTable = () => {
 	return (
 		<div>
-			<Table columns={columns} dataSource={data} scroll={{ x: 1200, y: 300 }} />
+			<Table columns={columns} dataSource={data} scroll={{ x: 1000, y: 300 }} />
 			,
 		</div>
 	)
