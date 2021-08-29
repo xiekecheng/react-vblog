@@ -2,7 +2,7 @@
  * @Author: your name
  * @Date: 2021-08-17 13:53:44
  * @LastEditors: xkccoding@gmail.com
- * @LastEditTime: 2021-08-27 16:02:07
+ * @LastEditTime: 2021-08-29 20:24:05
  * @FilePath: /react-vblog/src/routes/index.tsx
  */
 import React from 'react'
@@ -22,9 +22,11 @@ const ArticleList = loadable(() => import('@/views/article/ArticleList'))
 const ColumnManage = loadable(() => import('@/views/column/ColumnManage'))
 // 用户模块
 const UserManage = loadable(() => import('@/views/user/UserManage'))
-// 数据统计
+
+// 数据图表
 const Chart = loadable(() => import('@/views/statistics/Chart'))
 const Map = loadable(() => import('@/views/statistics/Map.jsx'))
+const Bcharts = loadable(() => import('@/views/statistics/Bcharts'))
 
 // 店铺模块
 const ShopManage = loadable(() => import('@/views/shop/ShopManage'))
@@ -39,6 +41,12 @@ const StaffAdd = loadable(() => import('@/views/staff/StaffAdd'))
 const RightCard = loadable(() => import('@/views/right/RightCard'))
 const RightManage = loadable(() => import('@/views/right/RightManage'))
 const RightAdd = loadable(() => import('@/views/right/RightAdd'))
+
+// 商品管理
+const GoodsList = loadable(() => import('@/views/goods/GoodsList'))
+const GoodsAdd = loadable(() => import('@/views/goods/GoodsAdd'))
+const GoodsEdit = loadable(() => import('@/views/goods/GoodsEdit'))
+
 const routes = [
 	{
 		id: 1000,
@@ -114,14 +122,22 @@ const routes = [
 		children: [
 			{
 				id: 1301,
-				title: '数据图表',
-				path: '/chart',
+				title: 'Echarts 图表',
+				path: '/echart',
 				component: Chart,
 				permission: ['admin', 'editor'],
 				breadcrumbName: 'chart',
 			},
 			{
 				id: 1302,
+				title: 'BizCharts 图表',
+				path: '/bchart',
+				component: Bcharts,
+				permission: ['admin', 'editor'],
+				breadcrumbName: 'map',
+			},
+			{
+				id: 1303,
 				title: '地图图表',
 				path: '/map',
 				component: Map,
@@ -199,24 +215,50 @@ const routes = [
 				id: 1601,
 				title: '权益卡',
 				path: '/right_card',
+				// path: '/right_card/rightManage',
 				component: RightCard,
 				permission: ['admin', 'editor'],
 				breadcrumbName: 'home',
-				// children:[
-				// 	{
-				// 		id:1611,
-				// 		title:'权益卡管理',
-				// 		path: '/right_manage',
-				// 		component:RightManage,
-				// 		permission:['admin', 'editor'],
-				// 	}
-				// ]
 			},
 			{
 				id: 1602,
 				title: '新建权益卡',
 				path: '/right_add',
 				component: RightAdd,
+				permission: ['admin', 'editor'],
+				breadcrumbName: 'home',
+			},
+		],
+	},
+	{
+		id: 1700,
+		title: '商品管理',
+		permission: ['admin', 'editor'],
+		icon: <BarChartOutlined />,
+		breadcrumbName: 'right',
+		children: [
+			{
+				id: 1701,
+				title: '商品列表',
+				path: '/goods_list',
+				// path: '/right_card/rightManage',
+				component: GoodsList,
+				permission: ['admin', 'editor'],
+				breadcrumbName: 'home',
+			},
+			{
+				id: 1702,
+				title: '发布商品',
+				path: '/goods_add',
+				component: GoodsAdd,
+				permission: ['admin', 'editor'],
+				breadcrumbName: 'home',
+			},
+			{
+				id: 1703,
+				title: '编辑商品',
+				path: '/goods_edit',
+				component: GoodsEdit,
 				permission: ['admin', 'editor'],
 				breadcrumbName: 'home',
 			},

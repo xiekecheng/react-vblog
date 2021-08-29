@@ -2,7 +2,7 @@
  * @Author: your name
  * @Date: 2021-08-19 01:16:00
  * @LastEditors: xkccoding@gmail.com
- * @LastEditTime: 2021-08-19 14:10:59
+ * @LastEditTime: 2021-08-29 14:40:48
  * @FilePath: /react-vblog/src/views/statistics/Chart.tsx
  */
 import React from 'react'
@@ -15,8 +15,7 @@ const ChartPage = () => {
 	return (
 		<div className='my-chart'>
 			<div>
-				{/* <BarGraph/> */}
-				{/* <BarEcharts/> */}
+				<h1>Echarts</h1>
 			</div>
 		</div>
 	)

@@ -2,7 +2,7 @@
  * @Author: your name
  * @Date: 2021-08-27 15:43:19
  * @LastEditors: xkccoding@gmail.com
- * @LastEditTime: 2021-08-27 18:56:18
+ * @LastEditTime: 2021-08-29 14:35:56
  * @FilePath: /react-vblog/src/views/right/RightCard.tsx
  */
 import React from 'react'
@@ -49,7 +49,7 @@ const RightCard = () => {
 			</Tabs>
 			<div>
 				<Switch>
-					<Route exact path='/right_card/rightManage'>
+					<Route  path='/right_card/rightManage'>
 						<RightManage />
 					</Route>
 					<Route path='/right_card/cardRecord'>

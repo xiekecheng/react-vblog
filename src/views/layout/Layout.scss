@@ -16,18 +16,25 @@
 			padding: 0 50px;
 		}
 	}
-
+.ant-layout-has-sider{
+	margin-top:64px
+}
 	// 侧边栏
 	.ant-layout-sider {
 		position: fixed;
-		height: 100%;
+		// height: 100%;
+		// overflow-y: scroll;
+		overflow-y: auto;
+    overflow-x: hidden;
 		top: 64px;
+		left: 0;
+		bottom: 0;
 	}
 
 	// 内容
 	.ant-layout-content {
 		margin-left: 200px;
-		margin-top: 64px;
+		// margin-top: 64px;
 		.my-layout-content {
 			overflow: auto;
 			padding: 30px;

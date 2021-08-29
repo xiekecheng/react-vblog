@@ -3,7 +3,7 @@
  * @Author: your name
  * @Date: 2021-08-19 11:44:09
  * @LastEditors: xkccoding@gmail.com
- * @LastEditTime: 2021-08-19 14:11:07
+ * @LastEditTime: 2021-08-29 14:40:37
  * @FilePath: /react-vblog/src/views/statistics/Map.jsx
  */
 import React, { useEffect } from 'react';
@@ -19,8 +19,7 @@ const MapChart = () => {
 // 	},[])
 	return (
 		<div id="container">
-
-
+		<h1>地图</h1>
 		</div>
 	);
 };
