@@ -1796,23 +1796,9 @@
     "core-js-pure" "^3.0.0"
     "regenerator-runtime" "^0.13.4"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.1", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.4", "@babel/runtime@^7.11.1", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.7", "@babel/runtime@^7.8.4":
-  "integrity" "sha512-BogPQ7ciE6SYAUPtlm9tWbgI9+2AgqSam6QivMgXgAT+fKbgppaj4ZX15MHeLC1PVF5sNk70huBu20XxWOs8Cg=="
-  "resolved" "https://registry.npmjs.org/@babel/runtime/-/runtime-7.12.18.tgz"
-  "version" "7.12.18"
-  dependencies:
-    "regenerator-runtime" "^0.13.4"
-
-"@babel/runtime@^7.5.1":
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.1", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.4", "@babel/runtime@^7.11.1", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.5", "@babel/runtime@^7.15.3", "@babel/runtime@^7.5.1", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.7", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
   "integrity" "sha1-LhwogMoRjlsvmYgyK9inZWoyUCs="
-  "resolved" "https://registry.nlark.com/@babel/runtime/download/@babel/runtime-7.15.3.tgz?cache=0&sync_timestamp=1628666503436&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Fruntime%2Fdownload%2F%40babel%2Fruntime-7.15.3.tgz"
-  "version" "7.15.3"
-  dependencies:
-    "regenerator-runtime" "^0.13.4"
-
-"@babel/runtime@^7.9.2":
-  "integrity" "sha1-LhwogMoRjlsvmYgyK9inZWoyUCs="
-  "resolved" "https://registry.nlark.com/@babel/runtime/download/@babel/runtime-7.15.3.tgz?cache=0&sync_timestamp=1628666503436&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Fruntime%2Fdownload%2F%40babel%2Fruntime-7.15.3.tgz"
+  "resolved" "https://registry.nlark.com/@babel/runtime/download/@babel/runtime-7.15.3.tgz?cache=0&sync_timestamp=1628666442112&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Fruntime%2Fdownload%2F%40babel%2Fruntime-7.15.3.tgz"
   "version" "7.15.3"
   dependencies:
     "regenerator-runtime" "^0.13.4"
@@ -3209,7 +3195,15 @@
   "resolved" "https://registry.nlark.com/ansi-styles/download/ansi-styles-5.2.0.tgz"
   "version" "5.2.0"
 
-"antd@^4.16.12", "antd@4.x":
+"antd-img-crop@^3.16.0":
+  "integrity" "sha1-waTPm2qXohtAA5qpT+3pU4VVWm8="
+  "resolved" "https://registry.nlark.com/antd-img-crop/download/antd-img-crop-3.16.0.tgz"
+  "version" "3.16.0"
+  dependencies:
+    "@babel/runtime" "^7.15.3"
+    "react-easy-crop" "^3.5.2"
+
+"antd@^4.16.12", "antd@>=4.0.0", "antd@4.x":
   "integrity" "sha1-jTKhrWqA/S6mHm8cQysxeC/SzVA="
   "resolved" "https://registry.nlark.com/antd/download/antd-4.16.12.tgz"
   "version" "4.16.12"
@@ -8914,6 +8908,11 @@
     "query-string" "^4.1.0"
     "sort-keys" "^1.0.0"
 
+"normalize-wheel@^1.0.1":
+  "integrity" "sha1-rsiGr/2wRQcNhWRH32Ls+GFG7EU="
+  "resolved" "https://registry.npm.taobao.org/normalize-wheel/download/normalize-wheel-1.0.1.tgz"
+  "version" "1.0.1"
+
 "npm-run-path@^2.0.0":
   "integrity" "sha1-NakjLfo11wZ7TLLd8jV7GHFTbF8="
   "resolved" "https://registry.npmjs.org/npm-run-path/-/npm-run-path-2.0.2.tgz"
@@ -10293,7 +10292,7 @@
     "kleur" "^3.0.3"
     "sisteransi" "^1.0.5"
 
-"prop-types@^15.0.0", "prop-types@^15.5.10", "prop-types@^15.6.2", "prop-types@^15.7.2":
+"prop-types@^15.0.0", "prop-types@^15.5.10", "prop-types@^15.6.2", "prop-types@^15.7.2", "prop-types@>=15.6.2":
   "integrity" "sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.7.2.tgz"
   "version" "15.7.2"
@@ -10876,7 +10875,7 @@
     "strip-ansi" "6.0.0"
     "text-table" "0.2.0"
 
-"react-dom@*", "react-dom@^17.0.1", "react-dom@^17.0.2", "react-dom@>= 16.9.0", "react-dom@>=16.0.0", "react-dom@>=16.9.0":
+"react-dom@*", "react-dom@^17.0.1", "react-dom@^17.0.2", "react-dom@>= 16.9.0", "react-dom@>=16.0.0", "react-dom@>=16.4.0", "react-dom@>=16.8.0", "react-dom@>=16.9.0":
   "integrity" "sha1-7P+2hF462Nv83EmPDQqTlzZQLCM="
   "resolved" "https://registry.nlark.com/react-dom/download/react-dom-17.0.2.tgz?cache=0&sync_timestamp=1629130724647&other_urls=https%3A%2F%2Fregistry.nlark.com%2Freact-dom%2Fdownload%2Freact-dom-17.0.2.tgz"
   "version" "17.0.2"
@@ -10884,6 +10883,14 @@
     "loose-envify" "^1.1.0"
     "object-assign" "^4.1.1"
     "scheduler" "^0.20.2"
+
+"react-easy-crop@^3.5.2":
+  "integrity" "sha1-H8ZSSegttAfIyHUVlYmoApqbegY="
+  "resolved" "https://registry.nlark.com/react-easy-crop/download/react-easy-crop-3.5.2.tgz"
+  "version" "3.5.2"
+  dependencies:
+    "normalize-wheel" "^1.0.1"
+    "tslib" "2.0.1"
 
 "react-error-boundary@3.0.2":
   "integrity" "sha1-dDmaTZpov+3h8/QmHqCqv8ZdmGg="
@@ -10963,7 +10970,7 @@
     "tiny-invariant" "^1.0.2"
     "tiny-warning" "^1.0.0"
 
-"react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^16.11.0 || ^17.0.0", "react@^16.14.0 || ^17.0.0", "react@^16.8.3 || ^17", "react@^17.0.1", "react@^17.0.2", "react@>= 16.9.0", "react@>=15", "react@>=16.0.0", "react@>=16.13.1", "react@>=16.3.0", "react@>=16.9.0", "react@17.0.2":
+"react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^16.11.0 || ^17.0.0", "react@^16.14.0 || ^17.0.0", "react@^16.8.3 || ^17", "react@^17.0.1", "react@^17.0.2", "react@>= 16.9.0", "react@>=15", "react@>=16.0.0", "react@>=16.13.1", "react@>=16.3.0", "react@>=16.4.0", "react@>=16.8.0", "react@>=16.9.0", "react@17.0.2":
   "integrity" "sha1-0LXMUW0p6z7uOD91tihkz7aAADc="
   "resolved" "https://registry.nlark.com/react/download/react-17.0.2.tgz?cache=0&sync_timestamp=1629130723342&other_urls=https%3A%2F%2Fregistry.nlark.com%2Freact%2Fdownload%2Freact-17.0.2.tgz"
   "version" "17.0.2"
@@ -12720,6 +12727,11 @@
   "integrity" "sha512-hcVC3wYEziELGGmEEXue7D75zbwIIVUMWAVbHItGPx0ziyXxrOMQx4rQEVEV45Ut/1IotuEvwqPopzIOkDMf0A=="
   "resolved" "https://registry.npmjs.org/tslib/-/tslib-2.1.0.tgz"
   "version" "2.1.0"
+
+"tslib@2.0.1":
+  "integrity" "sha1-QQ6w0RPltjVkkO7HSWA3JbAhtD4="
+  "resolved" "https://registry.nlark.com/tslib/download/tslib-2.0.1.tgz?cache=0&sync_timestamp=1628722556410&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftslib%2Fdownload%2Ftslib-2.0.1.tgz"
+  "version" "2.0.1"
 
 "tslib@2.0.3":
   "integrity" "sha1-jgdBrEX8DCJuWKF7/D5kubxsphw="

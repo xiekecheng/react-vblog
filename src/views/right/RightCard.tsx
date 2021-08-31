@@ -2,10 +2,10 @@
  * @Author: your name
  * @Date: 2021-08-27 15:43:19
  * @LastEditors: xkccoding@gmail.com
- * @LastEditTime: 2021-08-29 14:35:56
+ * @LastEditTime: 2021-08-31 16:23:45
  * @FilePath: /react-vblog/src/views/right/RightCard.tsx
  */
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Tabs } from 'antd'
 import { Route, Switch, useHistory } from 'react-router-dom'
 import loadable from '@loadable/component'
@@ -15,10 +15,12 @@ const CardRecord = loadable(() => import('@/views/right/CardRecord'))
 const CardWithdraw = loadable(() => import('@/views/right/CardWithdraw'))
 const RightCard = () => {
 	const history = useHistory()
-
+	useEffect(() => {
+		history.push('/right_card/rightManage')
+	}, [])
 	// 标签页路由跳转
 	function callback(key: any) {
-		history.push('/right_card/rightManage')
+		// history.push('/right_card/rightManage')
 		switch (key) {
 			case '1':
 				history.push('/right_card/rightManage')
@@ -49,7 +51,7 @@ const RightCard = () => {
 			</Tabs>
 			<div>
 				<Switch>
-					<Route  path='/right_card/rightManage'>
+					<Route path='/right_card/rightManage'>
 						<RightManage />
 					</Route>
 					<Route path='/right_card/cardRecord'>

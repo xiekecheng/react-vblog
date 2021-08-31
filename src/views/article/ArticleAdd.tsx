@@ -2,7 +2,7 @@
  * @Author: your name
  * @Date: 2021-08-17 15:12:55
  * @LastEditors: xkccoding@gmail.com
- * @LastEditTime: 2021-08-19 16:52:50
+ * @LastEditTime: 2021-08-31 16:51:35
  * @FilePath: /react-vblog/src/views/article/ArticleAdd.tsx
  */
 import { Button, Col, Form, Input, Row, Select, Space } from 'antd'
@@ -10,6 +10,8 @@ import React from 'react'
 import QuillForm from './components/QuillForm'
 const { Option } = Select
 const ArticleAdd = () => {
+	console.log(1111);
+	
 	// const onChange = (e: any) => {
 	// 	console.log(e)
 	// }

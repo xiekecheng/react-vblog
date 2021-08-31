@@ -2,7 +2,7 @@
  * @Author: your name
  * @Date: 2021-08-19 18:59:34
  * @LastEditors: xkccoding@gmail.com
- * @LastEditTime: 2021-08-19 21:36:55
+ * @LastEditTime: 2021-08-31 11:48:45
  * @FilePath: /react-vblog/src/views/shop/ShopManage.tsx
  */
 import { Col, Form, Input, Row } from 'antd'
@@ -13,26 +13,26 @@ import CascaderSelect from './components/CascaderSelect'
 import { Radio, Space } from 'antd'
 // import MapForm from './components/MapForm';
 import Amap from './components/Amap'
-import { HomeOutlined, UserOutlined } from '@ant-design/icons';
+import { HomeOutlined, UserOutlined } from '@ant-design/icons'
 
 const { TextArea } = Input
 const ShopManage = (props: any) => {
-	console.log('props',props);
-	
+	console.log('props', props)
+
 	return (
 		<div className='my-shop-manage'>
-			<div>
-			<Breadcrumb>
-    <Breadcrumb.Item href="">
-      <HomeOutlined />
-    </Breadcrumb.Item>
-    <Breadcrumb.Item href="">
-      <UserOutlined />
-      <span>Application List</span>
-    </Breadcrumb.Item>
-    <Breadcrumb.Item>Application</Breadcrumb.Item>
-  </Breadcrumb>
-			</div>
+			{/* <div>
+				<Breadcrumb>
+					<Breadcrumb.Item href=''>
+						<HomeOutlined />
+					</Breadcrumb.Item>
+					<Breadcrumb.Item href=''>
+						<UserOutlined />
+						<span>Application List</span>
+					</Breadcrumb.Item>
+					<Breadcrumb.Item>Application</Breadcrumb.Item>
+				</Breadcrumb>
+			</div> */}
 			<h1>门店管理</h1>
 			<Form labelCol={{ span: 4 }} wrapperCol={{ span: 7 }}>
 				<Form.Item name='shopName' label='店铺名称'>

@@ -2,7 +2,7 @@
  * @Author: your name
  * @Date: 2021-08-17 20:26:48
  * @LastEditors: xkccoding@gmail.com
- * @LastEditTime: 2021-08-19 11:42:23
+ * @LastEditTime: 2021-08-31 17:09:19
  * @FilePath: /react-vblog/src/views/layout/components/LayoutSider.tsx
  */
 import React from 'react'
@@ -24,7 +24,8 @@ const LayoutSider = () => {
 						ele.children.map((item: any) => {
 							return (
 								<Menu.Item key={item.id}>
-									<Link to={item.path}>{item.title}</Link>
+									{/* <Link to={item.path}>{item.title}</Link> */}
+									<Link to={item.sider}>{item.title}</Link>
 								</Menu.Item>
 							)
 						})}
@@ -35,7 +36,7 @@ const LayoutSider = () => {
 	return (
 		<div className='my-layout-sider'>
 			<Menu
-				onClick={handleClick}
+				// onClick={handleClick}
 				defaultSelectedKeys={['1']}
 				defaultOpenKeys={['sub1']}
 				mode='inline'

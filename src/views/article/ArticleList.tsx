@@ -2,7 +2,7 @@
  * @Author: your name
  * @Date: 2021-08-17 15:12:43
  * @LastEditors: xkccoding@gmail.com
- * @LastEditTime: 2021-08-19 14:53:34
+ * @LastEditTime: 2021-08-31 16:51:43
  * @FilePath: /react-vblog/src/views/article/ArticleList.tsx
  */
 import React from 'react'
@@ -21,6 +21,7 @@ import FormList from './components/FormList'
 const { Search } = Input
 const { Option } = Select
 const ArticleList = () => {
+	console.log(2222);
 	const onSearch = (value: any) => console.log(value)
 	return (
 		<div>
