@@ -2,13 +2,14 @@
  * @Author: your name
  * @Date: 2021-08-29 20:22:14
  * @LastEditors: xkccoding@gmail.com
- * @LastEditTime: 2021-09-01 00:52:51
+ * @LastEditTime: 2021-09-01 12:58:54
  * @FilePath: /react-vblog/src/views/goods/GoodsAdd.tsx
  */
 import React, { useState } from 'react';
 import { Modal } from 'antd';
 import { CloudUploadOutlined, DownloadOutlined } from '@ant-design/icons'
 import { Button, Form, Input, InputNumber, Select } from 'antd'
+import ImageUpdate from './components/ImageUpdate';
 const { Option } = Select
 
 const ModelApp = () => {
@@ -88,9 +89,11 @@ const GoodsAdd = () => {
         onCancel={() => setVisible(false)}
         width={1000}
       >
+        {/* <p>some contents...</p>
         <p>some contents...</p>
-        <p>some contents...</p>
-        <p>some contents...</p>
+        <p>some contents...</p> */}
+				<ImageUpdate/>
+				<span>支持 .jpg, .gif, .png, .bmp 格式，最多15张，单个图片不超过 10 MB。</span>
       </Modal>
 				{/* 模态框 结束 */}
 					</Form.Item>
@@ -119,13 +122,13 @@ const GoodsAdd = () => {
 						<InputNumber min={1} max={100000} defaultValue={3} />
 					</Form.Item>
 
-					<Form.Item name='price' label='库存'>
+					<Form.Item name='stock' label='库存'>
 						<InputNumber min={1} max={100000} defaultValue={3} />
 					</Form.Item>
-					<Form.Item label='商品编码'>
+					<Form.Item wrapperCol={{span:3}}  label='商品编码'>
 						<Input />
 					</Form.Item>
-					<Form.Item label='商品条码'>
+					<Form.Item wrapperCol={{span:3}}  label='商品条码'>
 						<Input />
 					</Form.Item>
 				</Form>
