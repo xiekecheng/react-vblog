@@ -10,7 +10,7 @@ import React from 'react';
 const LayoutHeader = () => {
 	return (
 		<div className="my-layout-header"  style={{backgroundColor:'#20A0FF'}}>
-			<h1>幸福商城零售管理平台</h1>
+			<h1>零售管理平台</h1>
 		</div>
 	);
 };

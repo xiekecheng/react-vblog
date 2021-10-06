@@ -47,6 +47,10 @@ const GoodsList = loadable(() => import('@/views/goods/GoodsList'))
 const GoodsAdd = loadable(() => import('@/views/goods/GoodsAdd'))
 const GoodsEdit = loadable(() => import('@/views/goods/GoodsEdit'))
 
+// 测试页面
+const TestPage = loadable(() => import('@/views/test/TestPage'))
+const TestPageTwo = loadable(() => import('@/views/test/TestPageTwo'))
+const TestPageThree = loadable(() => import('@/views/test/TestPageThree'))
 const routes = [
 	{
 		id: 1000,
@@ -280,6 +284,43 @@ const routes = [
 				component: GoodsEdit,
 				permission: ['admin', 'editor'],
 				breadcrumbName: '编辑商品',
+			},
+		],
+	},
+	{
+		id: 1800,
+		title: '测试页面',
+		permission: ['admin', 'editor'],
+		icon: <BarChartOutlined />,
+		breadcrumbName: '商品管理',
+		children: [
+			{
+				id: 1801,
+				title: '测试页面1',
+				path: '/test_page1',
+				sider: '/test_page1',
+				// path: '/right_card/rightManage',
+				component: TestPage,
+				permission: ['admin', 'editor'],
+				breadcrumbName: '测试页面1',
+			},
+			{
+				id: 1802,
+				title: '测试页面2',
+				path: '/test_page2',
+				sider: '/test_page2',
+				component: TestPageTwo,
+				permission: ['admin', 'editor'],
+				breadcrumbName: '测试页面2',
+			},
+			{
+				id: 1803,
+				title: '测试页面3',
+				path: '/test_page3',
+				sider: '/test_page3',
+				component: TestPageThree,
+				permission: ['admin', 'editor'],
+				breadcrumbName: '测试页面3',
 			},
 		],
 	},
