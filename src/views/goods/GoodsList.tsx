@@ -10,7 +10,6 @@ import {
 	Button,
 	Form,
 	DatePicker,
-	Space,
 	Select,
 	Row,
 	Col,
@@ -18,6 +17,7 @@ import {
 	Tabs,
 } from 'antd'
 import { Cascader } from 'antd'
+import GoodsTable from './components/GoodsTable';
 import './GoodsList.scss'
 const { Option } = Select
 const { RangePicker } = DatePicker
@@ -199,7 +199,9 @@ const GoodsList = () => {
 			<div className='my-tabs'>
 				<Tabs size='large' onChange={callback} type='card'>
 					<TabPane tab='全部' key='1'>
-						Content of Tab Pane 1
+						{/* Content of Tab Pane 1 */}
+						<GoodsTable/>
+
 					</TabPane>
 					<TabPane tab='销售中' key='2'>
 						Content of Tab Pane 2

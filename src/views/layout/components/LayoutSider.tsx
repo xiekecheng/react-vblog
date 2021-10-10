@@ -12,9 +12,9 @@ import {  Link } from 'react-router-dom'
 
 const { SubMenu } = Menu
 const LayoutSider = () => {
-	const handleClick = (e: any) => {
-		console.log('click ', e)
-	}
+	// const handleClick = (e: any) => {
+	// 	console.log('click ', e)
+	// }
 	// TODO: 使用<NavLink>完成路由菜单
 	const renderMenu = () => {
 		return routes.map((ele: any) => {

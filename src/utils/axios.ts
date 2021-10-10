@@ -11,8 +11,8 @@ const baseUrl =  'http://localhost:8012'
 const version =  '/api/v1'
 const instance = axios.create({
 	baseURL: baseUrl + version,
-	timeout: 1000,
-	headers: { 'X-Custom-Header': 'foobar' },
+	timeout: 5000,
+	// headers: { 'X-Custom-Header': 'foobar' },
 })
 
 // Add a request interceptor

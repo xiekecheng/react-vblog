@@ -6,7 +6,7 @@
  * @FilePath: /react-vblog/src/views/right/RightAdd.tsx
  */
 import React, { useState } from 'react'
-import { Menu, Dropdown, Row, Col, Divider } from 'antd'
+import { Menu, Dropdown, Row, Col } from 'antd'
 import { DownOutlined } from '@ant-design/icons'
 import { Checkbox } from 'antd'
 // import { Switch } from 'antd';
@@ -16,11 +16,6 @@ import {
 	Input,
 	Button,
 	Radio,
-	Select,
-	Cascader,
-	DatePicker,
-	InputNumber,
-	TreeSelect,
 	Switch,
 	Space,
 } from 'antd'
@@ -89,7 +84,7 @@ const RightAdd = () => {
 			</Menu.Item>
 		</Menu>
 	)
-	const onReceiveChange = () => {}
+	// const onReceiveChange = () => {}
 	return (
 		<div>
 			<Form

@@ -8,12 +8,10 @@
 import { Col, Row } from 'antd'
 import React from 'react'
 import { Button } from 'antd'
-import { Input, Tooltip } from 'antd'
+import { Input } from 'antd'
 import { Tabs } from 'antd'
 import {
-	InfoCircleOutlined,
 	SearchOutlined,
-	UserOutlined,
 } from '@ant-design/icons'
 import RightTable from './components/RightTable'
 import RightBandedTable from './components/RightBanedTable';

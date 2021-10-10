@@ -7,33 +7,33 @@
  */
 import React, { useState } from 'react';
 import { Modal } from 'antd';
-import { CloudUploadOutlined, DownloadOutlined } from '@ant-design/icons'
+import { CloudUploadOutlined } from '@ant-design/icons'
 import { Button, Form, Input, InputNumber, Select } from 'antd'
 import ImageUpdate from './components/ImageUpdate';
 const { Option } = Select
 
-const ModelApp = () => {
-  const [visible, setVisible] = useState(false);
-  return (
-    <>
-      <Button type="primary" onClick={() => setVisible(true)}>
-        Open Modal of 1000px width
-      </Button>
-      <Modal
-        title="Modal 1000px width"
-        centered
-        visible={visible}
-        onOk={() => setVisible(false)}
-        onCancel={() => setVisible(false)}
-        width={1000}
-      >
-        <p>some contents...</p>
-        <p>some contents...</p>
-        <p>some contents...</p>
-      </Modal>
-    </>
-  );
-};
+// const ModelApp = () => {
+//   const [visible, setVisible] = useState(false);
+//   return (
+//     <>
+//       <Button type="primary" onClick={() => setVisible(true)}>
+//         Open Modal of 1000px width
+//       </Button>
+//       <Modal
+//         title="Modal 1000px width"
+//         centered
+//         visible={visible}
+//         onOk={() => setVisible(false)}
+//         onCancel={() => setVisible(false)}
+//         width={1000}
+//       >
+//         <p>some contents...</p>
+//         <p>some contents...</p>
+//         <p>some contents...</p>
+//       </Modal>
+//     </>
+//   );
+// };
 
 const GoodsAdd = () => {
 	// function handleChange(value: any) {

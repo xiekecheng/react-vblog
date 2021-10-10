@@ -7,9 +7,11 @@
  */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import { fetchLogin } from '@/api/user'
+import Cookies from 'js-cookie'
 export const login = createAsyncThunk('user/login', async (data:object) => {
 	const info = await fetchLogin(data)
 	console.log('info',info.data.token)
+	Cookies.set('token',info.data.token)
 	return info.data.token
 })
 
@@ -20,7 +22,7 @@ interface UserState {
 
 const initialState: UserState = {
 	value: 0,
-	token: '',
+	token: Cookies.get('token'),
 }
 
 export const counterSlice = createSlice({

@@ -7,18 +7,28 @@
  */
 import { Col, Form, Input, Row } from 'antd'
 import { Breadcrumb } from 'antd'
-import React from 'react'
-// import { Input } from 'antd';
+import React, { useEffect } from 'react'
 import CascaderSelect from './components/CascaderSelect'
 import { Radio, Space } from 'antd'
-// import MapForm from './components/MapForm';
 import Amap from './components/Amap'
 import { HomeOutlined, UserOutlined } from '@ant-design/icons'
-
+import UploadImg from './components/UploadImg.jsx';
+import './shop.scss'
 const { TextArea } = Input
 const ShopManage = (props: any) => {
 	console.log('props', props)
 
+
+	// Start 接入地图地图
+	useEffect(() => {
+		// 创建地图实例
+		var map = new BMapGL.Map('shop-container')
+		// 设置中心点坐标
+		var point = new BMapGL.Point(116.404, 39.915)
+		// 地图初始化
+		map.centerAndZoom(point, 15)
+	})
+		// End 接入地图地图
 	return (
 		<div className='my-shop-manage'>
 			{/* <div>
@@ -34,11 +44,11 @@ const ShopManage = (props: any) => {
 				</Breadcrumb>
 			</div> */}
 			<h1>门店管理</h1>
-			<Form labelCol={{ span: 4 }} wrapperCol={{ span: 7 }}>
-				<Form.Item name='shopName' label='店铺名称'>
+			<Form labelCol={{ span: 4 }} wrapperCol={{ span: 7 }} >
+				<Form.Item name='shopName' label='店铺名称' rules={[{ required: true, message: '请输入店铺名称!' }]} >
 					<Input placeholder='门店名称最长20字'></Input>
 				</Form.Item>
-				<Form.Item name='phone' label='联系电话'>
+				<Form.Item name='phone' label='联系电话' rules={[{ required: true, message: '请输入联系电话!' }]}>
 					<Input.Group size='large'>
 						<Row gutter={8}>
 							<Col span={8}>
@@ -54,14 +64,17 @@ const ShopManage = (props: any) => {
 						</Row>
 					</Input.Group>
 				</Form.Item>
-				<Form.Item name='region' label='所属区域'>
+				<Form.Item name='region' label='所属区域' rules={[{ required: true, message: '请输入所属区域!' }]}>
 					<CascaderSelect />
 				</Form.Item>
 				<Form.Item name='shopName' label='地图点位'>
 					{/* <Amap /> */}
+					<span>请在地图中确认地址信息</span>
+					<div id='shop-container'></div>
 				</Form.Item>
 				<Form.Item name='shopName' label='门店照片'>
-					<Input></Input>
+					{/* <Input></Input> */}
+					<UploadImg/>
 				</Form.Item>
 				<Form.Item name='opening' label='营业时间'>
 					<Radio.Group>

@@ -12,6 +12,11 @@ import {
 	BarChartOutlined,
 	FormOutlined,
 	UserOutlined,
+	UsergroupDeleteOutlined,
+	AreaChartOutlined,
+	ShopOutlined,
+	MonitorOutlined,
+	ShoppingOutlined
 } from '@ant-design/icons'
 // const OtherComponent = loadable(() => import('./OtherComponent'))
 // 懒加载来进行加载路由
@@ -39,7 +44,7 @@ const StaffAdd = loadable(() => import('@/views/staff/StaffAdd'))
 
 // 权益管理
 const RightCard = loadable(() => import('@/views/right/RightCard'))
-const RightManage = loadable(() => import('@/views/right/RightManage'))
+// const RightManage = loadable(() => import('@/views/right/RightManage'))
 const RightAdd = loadable(() => import('@/views/right/RightAdd'))
 
 // 商品管理
@@ -127,7 +132,7 @@ const routes = [
 		id: 1300,
 		title: '数据统计',
 		permission: ['admin', 'editor'],
-		icon: <BarChartOutlined />,
+		icon: <AreaChartOutlined />,
 		breadcrumbName: '数据统计',
 		children: [
 			{
@@ -163,7 +168,7 @@ const routes = [
 		id: 1400,
 		title: '店铺设置',
 		permission: ['admin', 'editor'],
-		icon: <BarChartOutlined />,
+		icon: <ShopOutlined />,
 		breadcrumbName: '店铺设置',
 		children: [
 			{
@@ -199,7 +204,7 @@ const routes = [
 		id: 1500,
 		title: '员工管理',
 		permission: ['admin', 'editor'],
-		icon: <BarChartOutlined />,
+		icon: <UsergroupDeleteOutlined />,
 		breadcrumbName: '员工管理',
 		children: [
 			{
@@ -254,7 +259,7 @@ const routes = [
 		id: 1700,
 		title: '商品管理',
 		permission: ['admin', 'editor'],
-		icon: <BarChartOutlined />,
+		icon: <ShoppingOutlined />,
 		breadcrumbName: '商品管理',
 		children: [
 			{
@@ -291,7 +296,7 @@ const routes = [
 		id: 1800,
 		title: '测试页面',
 		permission: ['admin', 'editor'],
-		icon: <BarChartOutlined />,
+		icon: <MonitorOutlined />,
 		breadcrumbName: '商品管理',
 		children: [
 			{

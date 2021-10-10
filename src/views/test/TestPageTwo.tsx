@@ -1,5 +1,4 @@
-import { rejects } from 'assert';
-import { resolve } from 'dns';
+
 import React, { useEffect, useState } from 'react';
 
 const TestPage = () => {
@@ -21,13 +20,6 @@ const TestPage = () => {
 			setName('tom')
 			console.log(name);
 		}, 1000);
-		// console.log(name);
-		// new Promise(resolve,rejects).then(()=>{
-		// 				setName('tom')
-		// 	console.log(name);
-		// })
-		// await (setName('tom'))
-		
 		
 		
 	}

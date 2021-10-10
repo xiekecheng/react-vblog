@@ -9,39 +9,43 @@ import React from 'react'
 // import ReactDOM from 'react-dom'
 import { Switch, Route } from 'react-router-dom'
 import routesArr from '@/routes'
-import BreadcrumPage from '../BreadcrumPage';
-import NoMatch from './NoMatch';
+import BreadcrumPage from '../BreadcrumPage'
+import NoMatch from './NoMatch'
 // import Welcome from './Welcome';
 const LayoutContent = () => {
 	const renderRoutes = (arr: any) => {
 		let result: JSX.Element[] = []
 		// eslint-disable-next-line
-		arr.map((ele:any) => {
-			if(ele.component){
-				result.push( <Route key={ele.id} path={ele.path} component={ele.component} />)
+		arr.map((ele: any) => {
+			if (ele.component) {
+				result.push(
+					<Route key={ele.id} path={ele.path} component={ele.component} />
+				)
 			}
-			if(ele.children){
-				ele.children.map((item:any)=>(
-					result.push( <Route key={ele.id} path={item.path} component={item.component} />)
-				))
+			if (ele.children) {
+				ele.children.map((item: any) =>
+					result.push(
+						<Route key={ele.id} path={item.path} component={item.component} />
+					)
+				)
 			}
 		})
-		
+
 		return result
 	}
 
 	return (
 		<div className='my-layout-content'>
 			{/* <h1>面包屑</h1> */}
-			<BreadcrumPage/>
+			<BreadcrumPage />
 			{/* TODO: 添加欢迎页  添加404NOT FOUND页面 */}
 			{/* <Welcome/> */}
 			<Switch>
 				{renderRoutes(routesArr)}
 				{/* <Route path='/articleList' component={<ArticleList/>}/> */}
-				<Route path="*">
-            <NoMatch />
-          </Route>
+				<Route path='*'>
+					<NoMatch />
+				</Route>
 			</Switch>
 		</div>
 	)

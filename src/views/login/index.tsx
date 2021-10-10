@@ -12,9 +12,13 @@ import { useAppDispatch } from '@/hooks'
 import { login } from '@/store/reducer/user'
 const Login = () => {
 	const dispatch = useAppDispatch()
+	// const token = useAppSelector(({user})=>user.token)
 	const onFinish = (values: any) => {
 		console.log('Received values of form: ', values)
-		dispatch(login(values))
+		dispatch(login(values)).then(res=>{
+			console.log('res',res.payload);
+			// document.cookie
+		})
 	}
 	return (
 		<div className='my-login'>
@@ -28,7 +32,7 @@ const Login = () => {
 			>
 				<Form.Item
 					name='username'
-					rules={[{ required: true, message: 'Please input your Username!' }]}
+					rules={[{ required: true, message: '请输入用户名!' }]}
 				>
 					<Input
 						prefix={<UserOutlined className='site-form-item-icon' />}
@@ -37,7 +41,7 @@ const Login = () => {
 				</Form.Item>
 				<Form.Item
 					name='password'
-					rules={[{ required: true, message: 'Please input your Password!' }]}
+					rules={[{ required: true, message: '请输入密码!' }]}
 				>
 					<Input
 						prefix={<LockOutlined className='site-form-item-icon' />}
